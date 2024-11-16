@@ -294,25 +294,71 @@ footer {
         padding: 8px 20px; /* Ajuste do espaçamento dentro dos itens */
     }
 
-    /* Slider */
+    /* Responsividade - Ajustes para o slider em dispositivos móveis */
+@media screen and (max-width: 768px) {
+    /* Ajustes para o Slider */
+    .slider {
+        padding: 40px 10px;  /* Reduzir o padding do slider */
+        height: auto;  /* Deixa a altura do slider ajustável */
+    }
+
     .slider-content {
-        height: auto; /* Ajuste automático da altura */
-	padding: 10px
+        position: relative;
+        width: 100%;
+        height: auto;  /* Remove a altura fixa */
+        overflow: hidden;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: auto; /* Ajuste da altura para auto em dispositivos móveis */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: left 0.5s ease-in-out;
     }
 
     .slide img {
-        width: 60px; /* Ajusta o tamanho da imagem */
-        margin-bottom: 8px; /* Ajusta o espaço entre a imagem e o texto */
+        width: 80px; /* Ajuste o tamanho da imagem para dispositivos móveis */
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .slide h3 {
-        font-size: 1.3em; /* Ajuste da fonte do título */
+        font-size: 1.5em; /* Ajuste do tamanho do título */
     }
 
     .slide p {
-        font-size: 1em; /* Ajuste do tamanho do texto */
-        padding: 0 15px; /* Ajuste da largura do texto */
+        font-size: 1.2em; /* Ajuste do tamanho do parágrafo */
+        padding: 0 15px; /* Ajuste da largura do padding */
     }
+}
+
+/* Responsividade - Ajustes para telas menores (exemplo: 480px ou menos) */
+@media screen and (max-width: 480px) {
+    .slider-content {
+        padding: 10px; /* Reduz o padding para telas muito pequenas */
+    }
+
+    .slide img {
+        width: 60px; /* Ajuste do tamanho da imagem */
+        margin-bottom: 8px; /* Ajuste da margem entre imagem e texto */
+    }
+
+    .slide h3 {
+        font-size: 1.2em; /* Ajuste do título */
+    }
+
+    .slide p {
+        font-size: 1em; /* Ajuste do texto */
+    }
+}
+
 
     /* Rodapé */
     .footer-container {
