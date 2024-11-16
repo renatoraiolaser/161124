@@ -307,9 +307,10 @@ footer {
         position: relative;
         width: 100%;   /* O conteúdo do slider ocupa toda a largura da tela */
         height: auto;  /* A altura do slider se adapta ao conteúdo */
-        overflow: visible; /* Evita que o conteúdo seja cortado */
         display: flex;  /* Para garantir a organização correta dos slides */
         flex-direction: column; /* Organiza os slides em coluna no mobile */
+        align-items: center; /* Garante que o conteúdo esteja centralizado */
+        justify-content: center; /* Garante o conteúdo centralizado verticalmente */
     }
 
     .slide {
@@ -329,20 +330,24 @@ footer {
 
     /* Ajustes no tamanho das imagens */
     .slide img {
-        width: 80px; /* Reduz o tamanho da imagem para telas pequenas */
+        width: 100px; /* Ajusta a largura da imagem para o tamanho adequado no mobile */
         height: auto; /* Ajusta a altura proporcional à largura */
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
-    /* Ajuste de fontes para o texto nos slides */
+    /* Ajuste de fontes para o título nos slides */
     .slide h3 {
-        font-size: 1.6em; /* Ajusta o tamanho da fonte do título para não cortar */
-        margin-bottom: 10px;
+        font-size: 1.6em; /* Ajusta o tamanho do título */
+        margin-bottom: 10px; /* Ajusta o espaçamento entre o título e o texto */
+        color: #78572bff; /* Mantém a cor do título */
     }
 
+    /* Ajuste no texto do slide */
     .slide p {
-        font-size: 1.2em; /* Ajuste no tamanho do texto */
+        font-size: 1.2em; /* Ajusta o tamanho do texto */
         padding: 0 15px; /* Garante que o texto não ultrapasse as bordas */
+        color: white; /* Garante que o texto seja branco */
+        margin-bottom: 20px; /* Ajusta a margem inferior */
     }
 }
 
@@ -353,8 +358,8 @@ footer {
     }
 
     .slide img {
-        width: 60px; /* Reduzir ainda mais o tamanho da imagem para telas menores */
-        margin-bottom: 8px; /* Ajustar a margem */
+        width: 80px; /* Ajuste a imagem para telas muito pequenas */
+        margin-bottom: 8px; /* Ajuste a margem */
     }
 
     .slide h3 {
@@ -365,6 +370,7 @@ footer {
         font-size: 1em; /* Ajuste no tamanho do texto */
     }
 }
+
 
 
 
