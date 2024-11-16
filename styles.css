@@ -294,70 +294,77 @@ footer {
         padding: 8px 20px; /* Ajuste do espaçamento dentro dos itens */
     }
 
-    /* Responsividade - Ajustes para o slider em dispositivos móveis */
+/* Responsividade para o slider em dispositivos móveis */
 @media screen and (max-width: 768px) {
-    /* Ajustes para o Slider */
+    /* Ajustes para o fundo do slider */
     .slider {
-        padding: 40px 10px;  /* Reduzir o padding do slider */
+        padding: 40px 10px;  /* Reduz o padding do slider */
         height: auto;  /* Deixa a altura do slider ajustável */
+        width: 100%; /* Garante que o slider ocupe toda a largura */
     }
 
     .slider-content {
         position: relative;
-        width: 100%;
-        height: auto;  /* Remove a altura fixa */
-        overflow: hidden;
+        width: 100%;   /* Garante que o conteúdo ocupe toda a largura disponível */
+        height: auto;  /* Deixa a altura do conteúdo ajustável */
+        overflow: visible; /* Garante que o conteúdo não seja cortado */
     }
 
+    /* Ajustes nos slides */
     .slide {
         position: absolute;
         top: 0;
         left: 100%;
         width: 100%;
-        height: auto; /* Ajuste da altura para auto em dispositivos móveis */
+        height: auto; /* Ajuste de altura automática para o conteúdo */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         transition: left 0.5s ease-in-out;
+        visibility: visible; /* Garantir que o slide fique visível */
     }
 
+    /* Ajuste de tamanho das imagens */
     .slide img {
-        width: 80px; /* Ajuste o tamanho da imagem para dispositivos móveis */
+        width: 80px; /* Reduzir o tamanho da imagem para telas pequenas */
         height: auto;
         margin-bottom: 10px;
     }
 
+    /* Ajuste de fontes */
     .slide h3 {
-        font-size: 1.5em; /* Ajuste do tamanho do título */
+        font-size: 1.5em; /* Ajuste no título */
+        margin-bottom: 10px;
     }
 
     .slide p {
-        font-size: 1.2em; /* Ajuste do tamanho do parágrafo */
-        padding: 0 15px; /* Ajuste da largura do padding */
+        font-size: 1.2em; /* Ajuste no tamanho do parágrafo */
+        padding: 0 15px; /* Ajuste do padding para o texto não cortar */
     }
 }
 
-/* Responsividade - Ajustes para telas menores (exemplo: 480px ou menos) */
+/* Responsividade para telas muito pequenas (exemplo: 480px ou menos) */
 @media screen and (max-width: 480px) {
     .slider-content {
-        padding: 10px; /* Reduz o padding para telas muito pequenas */
+        padding: 10px; /* Menos padding para telas menores */
     }
 
     .slide img {
-        width: 60px; /* Ajuste do tamanho da imagem */
-        margin-bottom: 8px; /* Ajuste da margem entre imagem e texto */
+        width: 60px; /* Reduzir ainda mais o tamanho da imagem */
+        margin-bottom: 8px; /* Ajustar a margem */
     }
 
     .slide h3 {
-        font-size: 1.2em; /* Ajuste do título */
+        font-size: 1.3em; /* Ajuste no tamanho do título */
     }
 
     .slide p {
-        font-size: 1em; /* Ajuste do texto */
+        font-size: 1em; /* Ajuste no tamanho do texto */
     }
 }
+
 
 
     /* Rodapé */
