@@ -296,52 +296,53 @@ footer {
 
 /* Responsividade para o slider em dispositivos móveis */
 @media screen and (max-width: 768px) {
-    /* Ajustes para o fundo do slider */
     .slider {
-        padding: 40px 10px;  /* Reduz o padding do slider */
-        height: auto;  /* Deixa a altura do slider ajustável */
-        width: 100%; /* Garante que o slider ocupe toda a largura */
+        padding: 40px 20px;  /* Ajusta o padding do slider para telas menores */
+        height: auto;  /* A altura do slider será ajustável */
+        width: 100%;   /* O slider ocupa toda a largura da tela */
+        overflow: hidden; /* Garante que não tenha overflow visível no slider */
     }
 
     .slider-content {
         position: relative;
-        width: 100%;   /* Garante que o conteúdo ocupe toda a largura disponível */
-        height: auto;  /* Deixa a altura do conteúdo ajustável */
-        overflow: visible; /* Garante que o conteúdo não seja cortado */
+        width: 100%;   /* O conteúdo do slider ocupa toda a largura da tela */
+        height: auto;  /* A altura do slider se adapta ao conteúdo */
+        overflow: visible; /* Evita que o conteúdo seja cortado */
+        display: flex;  /* Para garantir a organização correta dos slides */
+        flex-direction: column; /* Organiza os slides em coluna no mobile */
     }
 
-    /* Ajustes nos slides */
     .slide {
         position: absolute;
         top: 0;
         left: 100%;
-        width: 100%;
-        height: auto; /* Ajuste de altura automática para o conteúdo */
+        width: 100%;   /* Garante que cada slide ocupe 100% da largura do slider */
+        height: auto;  /* A altura do slide será ajustada automaticamente */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
         transition: left 0.5s ease-in-out;
-        visibility: visible; /* Garantir que o slide fique visível */
+        visibility: visible; /* Garante que os slides sejam visíveis */
     }
 
-    /* Ajuste de tamanho das imagens */
+    /* Ajustes no tamanho das imagens */
     .slide img {
-        width: 80px; /* Reduzir o tamanho da imagem para telas pequenas */
-        height: auto;
+        width: 80px; /* Reduz o tamanho da imagem para telas pequenas */
+        height: auto; /* Ajusta a altura proporcional à largura */
         margin-bottom: 10px;
     }
 
-    /* Ajuste de fontes */
+    /* Ajuste de fontes para o texto nos slides */
     .slide h3 {
-        font-size: 1.5em; /* Ajuste no título */
+        font-size: 1.6em; /* Ajusta o tamanho da fonte do título para não cortar */
         margin-bottom: 10px;
     }
 
     .slide p {
-        font-size: 1.2em; /* Ajuste no tamanho do parágrafo */
-        padding: 0 15px; /* Ajuste do padding para o texto não cortar */
+        font-size: 1.2em; /* Ajuste no tamanho do texto */
+        padding: 0 15px; /* Garante que o texto não ultrapasse as bordas */
     }
 }
 
@@ -352,12 +353,12 @@ footer {
     }
 
     .slide img {
-        width: 60px; /* Reduzir ainda mais o tamanho da imagem */
+        width: 60px; /* Reduzir ainda mais o tamanho da imagem para telas menores */
         margin-bottom: 8px; /* Ajustar a margem */
     }
 
     .slide h3 {
-        font-size: 1.3em; /* Ajuste no tamanho do título */
+        font-size: 1.3em; /* Ajusta o título para telas pequenas */
     }
 
     .slide p {
