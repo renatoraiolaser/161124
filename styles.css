@@ -307,10 +307,11 @@ footer {
         position: relative;
         width: 100%;   /* O conteúdo do slider ocupa toda a largura da tela */
         height: auto;  /* A altura do slider se adapta ao conteúdo */
-        display: flex;  /* Para garantir a organização correta dos slides */
+        display: flex;
         flex-direction: column; /* Organiza os slides em coluna no mobile */
-        align-items: center; /* Garante que o conteúdo esteja centralizado */
         justify-content: center; /* Garante o conteúdo centralizado verticalmente */
+        align-items: center; /* Garante que o conteúdo esteja centralizado */
+        overflow: visible;  /* Garante que nada do conteúdo seja cortado */
     }
 
     .slide {
@@ -330,7 +331,8 @@ footer {
 
     /* Ajustes no tamanho das imagens */
     .slide img {
-        width: 100px; /* Ajusta a largura da imagem para o tamanho adequado no mobile */
+        width: 100%; /* Ajusta a largura da imagem para o tamanho adequado no mobile */
+        max-width: 200px; /* Limita a largura máxima da imagem */
         height: auto; /* Ajusta a altura proporcional à largura */
         margin-bottom: 15px;
     }
@@ -358,7 +360,8 @@ footer {
     }
 
     .slide img {
-        width: 80px; /* Ajuste a imagem para telas muito pequenas */
+        width: 80%; /* Ajuste a imagem para telas muito pequenas */
+        max-width: 150px; /* Limita a largura máxima da imagem */
         margin-bottom: 8px; /* Ajuste a margem */
     }
 
@@ -370,7 +373,6 @@ footer {
         font-size: 1em; /* Ajuste no tamanho do texto */
     }
 }
-
 
 
 
