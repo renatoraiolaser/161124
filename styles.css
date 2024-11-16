@@ -297,19 +297,20 @@ footer {
     /* Slider */
     .slider-content {
         height: auto; /* Ajuste automático da altura */
+	padding: 10px
     }
 
     .slide img {
-        width: 80px; /* Ajusta o tamanho da imagem */
-        margin-bottom: 10px; /* Ajusta o espaço entre a imagem e o texto */
+        width: 60px; /* Ajusta o tamanho da imagem */
+        margin-bottom: 8px; /* Ajusta o espaço entre a imagem e o texto */
     }
 
     .slide h3 {
-        font-size: 1.5em; /* Ajuste da fonte do título */
+        font-size: 1.3em; /* Ajuste da fonte do título */
     }
 
     .slide p {
-        font-size: 1.2em; /* Ajuste do tamanho do texto */
+        font-size: 1em; /* Ajuste do tamanho do texto */
         padding: 0 15px; /* Ajuste da largura do texto */
     }
 
