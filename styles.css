@@ -297,8 +297,8 @@ footer {
 /* Responsividade para o slider em dispositivos móveis */
 @media screen and (max-width: 768px) {
     .slider {
-        padding: 40px 20px;  /* Ajusta o padding do slider para telas menores */
-        height: auto;  /* A altura do slider será ajustável */
+        padding: 60px 20px;  /* Aumenta ligeiramente o padding da faixa verde */
+        height: auto;  /* A altura do slider será ajustada automaticamente */
         width: 100%;   /* O slider ocupa toda a largura da tela */
         overflow: hidden; /* Garante que não tenha overflow visível no slider */
     }
@@ -331,7 +331,7 @@ footer {
 
     /* Ajustes no tamanho das imagens */
     .slide img {
-        width: 100%; /* Ajusta a largura da imagem para o tamanho adequado no mobile */
+        width: 80%; /* Ajusta a largura da imagem para 80% do slider no mobile */
         max-width: 200px; /* Limita a largura máxima da imagem */
         height: auto; /* Ajusta a altura proporcional à largura */
         margin-bottom: 15px;
@@ -360,7 +360,7 @@ footer {
     }
 
     .slide img {
-        width: 80%; /* Ajuste a imagem para telas muito pequenas */
+        width: 70%; /* Ajuste a imagem para telas muito pequenas */
         max-width: 150px; /* Limita a largura máxima da imagem */
         margin-bottom: 8px; /* Ajuste a margem */
     }
@@ -373,6 +373,7 @@ footer {
         font-size: 1em; /* Ajuste no tamanho do texto */
     }
 }
+
 
 
 
