@@ -7,10 +7,12 @@
 
 body {
     font-family: Georgia; /* Tipografia Georgia */
-    background-color: #0c3835ff; /* Verde mais escuro */
+    background-color: white; /* Verde mais escuro */
     color: black;
+    text-align: center;
     line-height: 2;
 }
+
 
 /* Topo */
 header {
@@ -59,95 +61,70 @@ nav ul li a:hover {
 }
 
 /* Slogan e Foto */
-.slogan {
-    background-color: white;
-    padding: 80px 40px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 40px;
-}
-
-.slogan-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-}
-
-.advogada-foto {
-    width: 250px; /* Foto menor */
-    height: 250px; /* Altura igual à largura */
-    border-radius: 50%; /* Torna a foto redonda */
-    object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
 
 .slogan-text h1 {
-    font-size: 4em; /* Slogan maior */
+    font-size: 2em; /* Slogan maior */
     color: #0c3835ff;
 }
-
 .slogan-text h2 {
     font-size: 3em;
+    margin-top: 30px;
+    color: #78572bff; /* Dourado */
+}
+.slogan-text p {
+    font-size: 1.4em;
+    font-tipe: bold
     margin-top: 10px;
     color: #78572bff; /* Dourado */
 }
 
-/* Estilos básicos do slider */
-.slider {
-    background-color: #0c3835ff; /* Verde mais escuro */
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    margin-bottom: 80px;
-}
 
-.slider-content {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Limita a largura máxima do slider */
-    margin: 0 auto;
-    overflow: hidden;
-    height: 300px; /* Ajusta a altura para desktop */
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 100%; /* Inicialmente, os slides ficam fora da tela à direita */
-    width: 100%;
-    height: 100%;
+/* Contêiner principal */
+.areas-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
+}
+
+/* Card de cada área */
+.area-card {
+    background-color: white;
+    color: #0c3835; /* Verde escuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
     text-align: center;
-    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0; /* Inicia invisível */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.slide.active {
-    left: 0; /* Move o slide para a posição visível */
-    opacity: 1; /* Torna o slide visível */
+.area-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.slide img {
-    width: 50%; /* Ajusta o tamanho da imagem (50% da largura do slide) */
-    max-width: 150px; /* Limita o tamanho máximo da imagem */
-    height: auto;
-    margin-bottom: 15px;
+/* Ícone de cada área */
+.area-icon {
+    width: 60px;
+    margin-bottom: 5px;
+    margin-top: 30px;
 }
 
-.slide h3 {
-    color: #78572bff;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.slide p {
-    color: white;
+/* Título de cada área */
+.area-title {
     font-size: 1.5em;
-    padding: 0 20px;
+    color: #78572b; /* Dourado */
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+/* Descrição de cada área */
+.area-description {
+    font-size: 2em;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Rodapé */
@@ -185,84 +162,6 @@ footer {
     margin: 5px 0;
 }
 
-
-/* Botão Agendamento */
-.btn-agendamento {
-    background-color: #78572bff; /* Dourado */
-    color: #0c3835ff; /* Verde mais escuro */
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 1.1em;
-    display: inline-block;
-}
-
-.btn-agendamento:hover {
-    background-color: #a76e3cff; /* Tom levemente mais claro de dourado */
-    color: white;
-    transform: scale(1.05);
-}
-
-/* Formulário de Agendamento */
-.agendamento-form {
-    background-color: white;
-    color: #0c3835ff;
-    padding: 40px 20px;
-    max-width: 600px;
-    margin: 40px auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.agendamento-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #78572bff;
-}
-
-.agendamento-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.agendamento-form input, 
-.agendamento-form textarea, 
-.agendamento-form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.agendamento-form input[type="checkbox"] {
-    width: auto;
-    margin-right: 10px;
-}
-
-.agendamento-form .gdpr {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.agendamento-form button {
-    background-color: #78572bff;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.agendamento-form button:hover {
-    background-color: #a76e3cff;
-}
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
@@ -375,4 +274,3 @@ footer {
         margin-top: 20px;
     }
 }
-
