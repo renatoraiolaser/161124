@@ -109,7 +109,7 @@ nav {
     display: flex; /* Usa Flexbox */
     align-items: center; /* Centraliza verticalmente os itens */
     justify-content: center; /* Centraliza horizontalmente os itens */
-    height: 70px; /* Altura da barra de navegação */
+    height: auto; /* Altura da barra de navegação */
     padding: 0 20px; /* Espaçamento lateral */
 }
 
@@ -487,199 +487,278 @@ iframe {
     background-color: #a76e3cff;
 }
 
-/* Reset básico e tipografia */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Corpo e tipografia básica */
-body {
-    font-family: Georgia, serif;
-    background-color: #0c3835ff; /* Verde mais escuro */
-    color: black;
-    line-height: 2;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-/* Responsividade para dispositivos menores que tablets */
-@media (max-width: 1024px) {
-    /* Navegação */
-    nav {
-        flex-direction: column; /* Empilha os itens da navegação */
-        align-items: center; /* Centraliza */
-        height: auto;
-        gap: 10px;
-    }
-
-    nav ul {
-        flex-direction: column; /* Empilha os links da barra de navegação */
-        gap: 15px;
-    }
-
-    nav ul li a {
-        padding: 10px 15px; /* Menor padding */
-        font-size: 1em; /* Tamanho reduzido */
-    }
-
-    /* Fotos e conteúdo */
-    .slogan, .contacto, .area, .sobre {
-        padding: 30px 15px; /* Reduzindo o padding para telas pequenas */
-    }
-
-    .advogada-foto, .lojafoto-foto {
-        width: 200px;
-        height: 200px;
-    }
-
-    /* Ajuste dos sliders */
-    .slider-content {
-        height: 250px;
-    }
-
-    .slider img {
-        width: 60%; /* Ajusta o tamanho da imagem */
-        max-width: 120px; /* Limita o tamanho máximo da imagem */
-    }
-
-    /* Empilhar conteúdo no "slogan" */
-    .slogan-content {
-        flex-direction: column; /* Empilha a foto e o texto */
-        align-items: center; /* Centraliza tudo */
-        text-align: center; /* Centraliza texto */
-    }
-
-    .slogan-text h1, 
-    .contacto-text h1, 
-    .sobre-text h1 {
-        font-size: 2em; /* Ajusta o tamanho para celular */
-    }
-
-    .slogan-text h2, 
-    .contacto-text h2, 
-    .sobre-text h2 {
-        font-size: 1.5em;
-    }
-
-    .area-content {
-        flex-direction: column; /* Empilha fotos e textos */
+/* Responsividade - Ajustes para telas menores que 1200px */
+@media (max-width: 1200px) {
+    .footer-container {
+        flex-direction: column;
         align-items: center;
-    }
-
-    /* Ajustes no footer */
-    footer {
-        flex-direction: column; /* Alinha os itens do rodapé verticalmente */
-        gap: 15px;
-        text-align: center;
+        padding: 0 20px;
     }
 
     .footer-logo img {
-        width: 150px; /* Ajusta o tamanho do logo */
-        margin-bottom: 10px;
+        width: 180px;
     }
 
     .footer-contacts {
         text-align: center;
+        margin-top: 20px;
+    }
+
+
+    .logo img {
+        width: 180px;
+    }
+
+
+    /* Navegação */
+    nav ul {
+        flex-direction: column; /* Menu fica empilhado em telas pequenas */
+        gap: 15px; /* Espaçamento entre os itens do menu */
+    
+    }
+
+    nav ul li a {
+        font-size: 1em; /* Ajuste do tamanho da fonte do menu */
+        padding: 8px 20px; /* Ajuste do espaçamento dentro dos itens */
+
+    }
+
+/* Responsividade para telas menores que 900px */
+@media (max-width: 900px) {
+    .cookie-popup {
+        width: 90%; /* Ajusta para telas pequenas */
+        max-width: 400px;
+        height: 220px; /* Ajuste da altura */
+    }
+
+    .cookie-popup p {
+        font-size: 0.9em;
+    }
+
+    .cookie-popup button {
+        padding: 8px 16px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+ /* Navegação */
+ nav ul {
+    flex-direction: column; /* Menu fica empilhado em telas pequenas */
+    gap: 15px; /* Espaçamento entre os itens do menu */
+   
+}
+
+    .slogan-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .advogada-foto {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 15px;
+    }
+
+    .slogan-text h1 {
+        font-size: 2em;
+    }
+
+    .slogan-text h2 {
+        font-size: 2em;
+    }
+
+    .slogan-text h3 {
+        font-size: 1.2em;
+    }
+
+    .slider-content {
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slide img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .slide h3 {
+        font-size: 1.5em;
+    }
+
+    .slide p {
+        font-size: 1.2em;
+        padding: 0 10px;
+    }
+
+    .agendamento-form {
+        padding: 50px 20px;
+        max-width: 90%; /* Ajuste para dispositivos móveis */
+    }
+
+    .agendamento-form h2 {
+        font-size: 1.8em;
+    }
+
+    .agendamento-form input,
+    .agendamento-form textarea,
+    .agendamento-form select {
+        font-size: 1em;
+    }
+
+    .agendamento-form button {
+        padding: 10px 20px;
+    }
+
+    .map-container {
+        height: 300px; /* Ajuste do mapa */
     }
 }
 
-/* Responsividade para smartphones (largura até 768px) */
-@media (max-width: 768px) {
-    /* Empilhar itens da navegação */
-    nav ul li a {
-        font-size: 0.9em;
-        padding: 8px 12px;
+/* Responsividade para telas menores que 600px */
+@media (max-width: 600px) {
+    .cookie-popup {
+        width: 90%; /* Ajusta para telas muito pequenas */
+        height: 180px;
     }
 
-    /* Ajustes gerais de texto */
-    .slogan, .contacto, .area, .sobre {
-        padding: 30px 10px; /* Ajusta o padding */
+    .cookie-popup p {
+        font-size: 0.8em;
     }
 
-    .slogan-text h1, 
-    .contacto-text h1, 
-    .sobre-text h1 {
-        font-size: 1.8em; /* Reduz o tamanho dos títulos */
+    .cookie-popup button {
+        padding: 6px 12px;
     }
 
-    .slogan-text h2, 
-    .contacto-text h2, 
-    .sobre-text h2 {
-        font-size: 1.3em;
+    .logo {
+        width: 150px;
     }
 
-    /* Fotos menores */
-    .advogada-foto, .lojafoto-foto {
+    .slogan-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .advogada-foto {
         width: 150px;
         height: 150px;
     }
 
-    /* Ajuste do slider */
-    .slider-content {
-        height: 200px;
+    .slogan-text h1 {
+        font-size: 1.8em;
     }
 
-    .slider img {
-        width: 50%;
-        max-width: 100px;
+    .slogan-text h2 {
+        font-size: 2em;
     }
 
-    /* Ajustes no rodapé */
-    footer {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        gap: 10px;
-    }
-}
-
-/* Responsividade para telas muito pequenas (320px a 480px) */
-@media (max-width: 480px) {
-    /* Ajustes no menu de navegação */
-    nav ul li a {
-        font-size: 0.8em;
-        padding: 6px 10px;
-    }
-
-    /* Ajustes de layout */
-    .slogan, .contacto, .area, .sobre {
-        padding: 20px 10px; /* Reduz o padding */
-    }
-
-    .slogan-text h1, 
-    .contacto-text h1, 
-    .sobre-text h1 {
-        font-size: 1.5em; /* Menor título */
-    }
-
-    .slogan-text h2, 
-    .contacto-text h2, 
-    .sobre-text h2 {
+    .slogan-text h3 {
         font-size: 1em;
     }
 
-    /* Reduzir ainda mais as imagens */
-    .advogada-foto, .lojafoto-foto {
-        width: 100px;
-        height: 100px;
+    .contacto-text h1 {
+        font-size: 1.6em;
     }
 
-    /* Ajuste no slider */
-    .slider-content {
-        height: 150px;
+    .contacto-text h2 {
+        font-size: 2.2em;
     }
 
-    .slider img {
-        width: 30%;
-        max-width: 80px;
+    .contacto-text p {
+        font-size: 1.2em;
     }
 
-    /* Ajuste no rodapé */
-    footer {
+    .area-content {
+        flex-direction: column;
         text-align: center;
     }
 
-    .footer-logo img {
-        width: 120px;
+    .area-text h1 {
+        font-size: 1.5em;
     }
+
+    .area-text h2 {
+        font-size: 2.2em;
+    }
+
+    .area-text p {
+        font-size: 1.3em;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lojafoto-foto {
+        width: 150px;
+        height: 150px;
+    }
+
+    .sobre-text h1 {
+        font-size: 2em;
+    }
+
+    .sobre-text h2 {
+        font-size: 2.5em;
+    }
+
+    .sobre-text p {
+        font-size: 1.3em;
+    }
+
+    /* Ajuste do slider */
+    .slider-content {
+        height: 250px; /* Ajusta a altura */
+        position: relative;
+    }
+
+    .slide img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .slide h3 {
+        font-size: 1.5em;
+    }
+
+    .slide p {
+        font-size: 1em;
+    }
+
+    .foto2-content {
+        height: 250px;
+    }
+
+    .foto2-foto {
+        width: 250px;
+        height: 250px;
+    }
+
+    .agendamento-form {
+        padding: 40px 10px;
+        max-width: 95%;
+    }
+
+    .agendamento-form h2 {
+        font-size: 1.5em;
+    }
+
+    .agendamento-form input,
+    .agendamento-form textarea,
+    .agendamento-form select {
+        font-size: 1em;
+    }
+
+    .agendamento-form button {
+        padding: 8px 15px;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+}
 }
