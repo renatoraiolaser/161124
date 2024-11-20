@@ -487,18 +487,35 @@ iframe {
     background-color: #a76e3cff;
 }
 
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e tipografia básica */
+body {
+    font-family: Georgia, serif;
+    background-color: #0c3835ff; /* Verde mais escuro */
+    color: black;
+    line-height: 2;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 /* Responsividade para dispositivos menores que tablets */
 @media (max-width: 1024px) {
-    /* Centralizar navegação e ajustar paddings */
+    /* Navegação */
     nav {
-        flex-direction: column; /* Empilha os itens */
+        flex-direction: column; /* Empilha os itens da navegação */
         align-items: center; /* Centraliza */
         height: auto;
         gap: 10px;
     }
 
     nav ul {
-        flex-direction: column; /* Empilha os links */
+        flex-direction: column; /* Empilha os links da barra de navegação */
         gap: 15px;
     }
 
@@ -507,53 +524,37 @@ iframe {
         font-size: 1em; /* Tamanho reduzido */
     }
 
-    /* Ajuste geral dos textos */
-    .slogan-text h1, 
-    .contacto-text h1, 
-    .sobre-text h1 {
-        font-size: 2.5em; /* Reduz tamanho de títulos */
+    /* Fotos e conteúdo */
+    .slogan, .contacto, .area, .sobre {
+        padding: 30px 15px; /* Reduzindo o padding para telas pequenas */
     }
 
-    .slogan-text h2, 
-    .contacto-text h2, 
-    .sobre-text h2 {
-        font-size: 2em;
-    }
-
-    /* Fotos menores */
     .advogada-foto, .lojafoto-foto {
         width: 200px;
         height: 200px;
     }
 
-    /* Reduzir slider */
+    /* Ajuste dos sliders */
     .slider-content {
         height: 250px;
     }
 
     .slider img {
-        width: 40%;
-        max-width: 120px;
-    }
-}
-
-/* Responsividade para smartphones (largura até 768px) */
-@media (max-width: 768px) {
-    /* Navegação mais compacta */
-    nav ul li a {
-        font-size: 0.9em;
-        padding: 8px 12px;
+        width: 60%; /* Ajusta o tamanho da imagem */
+        max-width: 120px; /* Limita o tamanho máximo da imagem */
     }
 
-    /* Ajustes para textos */
-    .slogan, .contacto, .area, .sobre {
-        padding: 30px 15px;
+    /* Empilhar conteúdo no "slogan" */
+    .slogan-content {
+        flex-direction: column; /* Empilha a foto e o texto */
+        align-items: center; /* Centraliza tudo */
+        text-align: center; /* Centraliza texto */
     }
 
     .slogan-text h1, 
     .contacto-text h1, 
     .sobre-text h1 {
-        font-size: 2em;
+        font-size: 2em; /* Ajusta o tamanho para celular */
     }
 
     .slogan-text h2, 
@@ -562,71 +563,123 @@ iframe {
         font-size: 1.5em;
     }
 
+    .area-content {
+        flex-direction: column; /* Empilha fotos e textos */
+        align-items: center;
+    }
+
+    /* Ajustes no footer */
+    footer {
+        flex-direction: column; /* Alinha os itens do rodapé verticalmente */
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 150px; /* Ajusta o tamanho do logo */
+        margin-bottom: 10px;
+    }
+
+    .footer-contacts {
+        text-align: center;
+    }
+}
+
+/* Responsividade para smartphones (largura até 768px) */
+@media (max-width: 768px) {
+    /* Empilhar itens da navegação */
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+
+    /* Ajustes gerais de texto */
+    .slogan, .contacto, .area, .sobre {
+        padding: 30px 10px; /* Ajusta o padding */
+    }
+
+    .slogan-text h1, 
+    .contacto-text h1, 
+    .sobre-text h1 {
+        font-size: 1.8em; /* Reduz o tamanho dos títulos */
+    }
+
+    .slogan-text h2, 
+    .contacto-text h2, 
+    .sobre-text h2 {
+        font-size: 1.3em;
+    }
+
     /* Fotos menores */
     .advogada-foto, .lojafoto-foto {
         width: 150px;
         height: 150px;
     }
 
-    /* Slider ajustado */
+    /* Ajuste do slider */
     .slider-content {
         height: 200px;
     }
 
-    footer {
-        flex-direction: column; /* Alinha itens verticalmente */
-        gap: 15px;
-        text-align: center;
+    .slider img {
+        width: 50%;
+        max-width: 100px;
     }
 
-    .footer-logo img {
-        margin-bottom: 10px;
+    /* Ajustes no rodapé */
+    footer {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        gap: 10px;
     }
 }
 
 /* Responsividade para telas muito pequenas (320px a 480px) */
 @media (max-width: 480px) {
-    /* Navegação ainda mais compacta */
-    nav ul {
-        gap: 10px; /* Espaçamento menor entre links */
-    }
-
+    /* Ajustes no menu de navegação */
     nav ul li a {
         font-size: 0.8em;
         padding: 6px 10px;
     }
 
-    /* Ajuste de elementos de conteúdo */
+    /* Ajustes de layout */
+    .slogan, .contacto, .area, .sobre {
+        padding: 20px 10px; /* Reduz o padding */
+    }
+
     .slogan-text h1, 
     .contacto-text h1, 
     .sobre-text h1 {
-        font-size: 1.8em;
+        font-size: 1.5em; /* Menor título */
     }
 
     .slogan-text h2, 
     .contacto-text h2, 
     .sobre-text h2 {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
-    /* Fotos menores */
+    /* Reduzir ainda mais as imagens */
     .advogada-foto, .lojafoto-foto {
         width: 100px;
         height: 100px;
     }
 
-    /* Altura mínima do slider */
+    /* Ajuste no slider */
     .slider-content {
         height: 150px;
     }
 
     .slider img {
         width: 30%;
-        max-width: 100px;
+        max-width: 80px;
     }
 
-    .btn-agendamento {
-        font-size: 0.9em;
-        padding: 8px 15px;
+    /* Ajuste no rodapé */
+    footer {
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 120px;
     }
 }
