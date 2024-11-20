@@ -62,18 +62,17 @@ nav ul li a:hover {
 
 /* Slogan e Foto */
 
-.slogan-text h1 {
+.area-text h1 {
     font-size: 2em; /* Slogan maior */
     color: #0c3835ff;
 }
-.slogan-text h2 {
+.area-text h2 {
     font-size: 3em;
     margin-top: 30px;
     color: #78572bff; /* Dourado */
 }
-.slogan-text p {
+.area-text p {
     font-size: 1.4em;
-    font-tipe: bold
     margin-top: 10px;
     color: #78572bff; /* Dourado */
 }
@@ -142,7 +141,7 @@ footer {
     align-items: center; /* Alinha verticalmente os itens */
     max-width: 1500px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 70px;
 }
 
 .footer-logo img {
@@ -150,7 +149,7 @@ footer {
 }
 
 .footer-contacts {
-    text-align: left;
+    text-align: center;
 }
 
 .footer-contacts h3 {
@@ -273,4 +272,5 @@ footer {
         text-align: center;
         margin-top: 20px;
     }
+}
 }

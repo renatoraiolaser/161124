@@ -6,11 +6,24 @@
 }
 
 body {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+body {
     font-family: Georgia; /* Tipografia Georgia */
     background-color: #0c3835ff; /* Verde mais escuro */
     color: black;
     line-height: 2;
+    height: 100%;
+    overflow-x: hidden;
 }
+main {
+    min-height: calc(100vh - 70px); /* Garante que o conteúdo ocupe o espaço abaixo da barra */
+}
+
 /* Estilo do Pop-up de Cookies */
 .cookie-popup {
     position: fixed;
@@ -22,7 +35,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: -1;;
     width: 90%; /* Ajusta para telas pequenas */
     height:250px;
     max-width: 500px; /* Limita o tamanho máximo */
@@ -32,9 +45,14 @@ body {
     flex-direction: column; /* Organiza elementos verticalmente */
     align-items: center; /* Centraliza texto e botão */
 }
-
+.cookie-popup.hidden {
+    display: none;
+    z-index: -1;
+}
+ 
 .cookie-popup.show {
-    opacity: 1; /* Torna visível */
+    opacity: 13; /* Torna visível */
+   
 }
 
 .cookie-popup p {
@@ -70,7 +88,7 @@ body {
 /* Topo */
 header {
     background-color: white; /* Faixa branca */
-    padding: 20px 0;
+    padding: 30px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
@@ -79,39 +97,48 @@ header {
 }
 
 .logo {
-    width: 300px; /* Tamanho ajustado do logotipo */
+    width: 300px; /* Tamanho fixo do logotipo */
+    height: auto;
+    margin: 0; /* Remove margens inconsistentes */
+    padding: 0; /* Remove padding adicional */
     margin-bottom: 20px; /* Espaço abaixo do logotipo */
 }
 
 nav {
-    background-color: #0c3835ff; /* Verde mais escuro */
-    text-align: center;
-    padding: 20px 0;
+    background-color: #0c3835; /* Cor de fundo */
+    display: flex; /* Usa Flexbox */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+    height: 70px; /* Altura da barra de navegação */
+    padding: 0 20px; /* Espaçamento lateral */
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center; /* Centraliza os itens da navegação */
-    gap: 35px;
+    list-style-type: none; /* Remove os marcadores */
+    display: flex; /* Layout flexível para os itens */
+    align-items: center; 
+    gap: 30px; /* Espaçamento horizontal entre os itens */
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 15px 20px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    text-decoration: none; /* Remove sublinhado */
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 1.1em; /* Tamanho da fonte */
+    padding: 20px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    transition: all 0.3s ease; /* Animação suave */
+    border: 2px solid transparent; /* Borda invisível para hover */
 }
 
 nav ul li a:hover {
-    background-color: #78572bff; /* Dourado */
-    color: white;
-    border-color: #78572bff; /* Borda dourada ao passar o mouse */
+    background-color: #78572b; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+    border-color: #78572b; /* Cor da borda ao passar o mouse */
 }
+
 
 /* Slogan e Foto */
 .slogan {
@@ -138,7 +165,7 @@ nav ul li a:hover {
 }
 
 .slogan-text h1 {
-    font-size: 4em; /* Slogan maior */
+    font-size: 4em; /* não, o css que tens no areas não está igual ao do styles*/
     color: #0c3835ff;
 }
 
@@ -152,6 +179,101 @@ nav ul li a:hover {
     margin-top: 10px;
     color:black; /* black */
 }
+.contacto {
+    background-color: white;
+    padding: 80px 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 40px;
+}
+
+
+.contacto-text h1 {
+    font-size: 2em; /* Slogan maior */
+    color: #0c3835ff;
+}
+.contacto-text h2 {
+    font-size: 3em;
+    margin-top: 30px;
+    color: #78572bff; /* Dourado */
+}
+.contacto-text p {
+    font-size: 1.4em;
+    margin-top: 10px;
+    color: black
+
+}
+
+.area {
+    background-color: white;
+    padding: 80px 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 40px;
+}
+.area-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+.area-text h1 {
+    font-size: 2em; /* Slogan maior */
+    color: #0c3835ff;
+}
+.area-text h2 {
+    font-size: 3em;
+    margin-top: 30px;
+    color: #78572bff; /* Dourado */
+}
+.area-text p {
+    font-size: 2em;
+    margin-top: 10px;
+    color: black
+
+}
+.sobre {
+    background-color: white;
+    padding: 80px 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 40px;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+
+.sobre-text h1 {
+    font-size: 4em; /* não, o css que tens no areas não está igual ao do styles*/
+    color: #0c3835ff;
+}
+
+.sobre-text h2 {
+    font-size: 5em;
+    margin-top: 10px;
+    color: #78572bff; /* Dourado */
+}
+.sobre-text p {
+    font-size: 2em;
+    margin-top: 10px;
+    color:black; /* black */
+}
+
+
+/* Ícone de cada área */
+.area-icon {
+    width: 60px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
 /* Estilos básicos do slider */
 .slider {
     background-color: #0c3835ff; /* Verde mais escuro */
@@ -224,7 +346,7 @@ footer {
     align-items: center; /* Alinha verticalmente os itens */
     max-width: 1500px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 70px;
 }
 
 .footer-logo img {
@@ -232,7 +354,7 @@ footer {
 }
 
 .footer-contacts {
-    text-align: left;
+    text-align: center;
 }
 
 .footer-contacts h3 {
@@ -264,11 +386,24 @@ footer {
     transform: scale(1.05);
 }
 
+/* Estilo adicional para o mapa */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin: 40px 0;
+    position: left;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* Formulário de Agendamento */
 .agendamento-form {
     background-color: white;
     color: #0c3835ff;
-    padding: 40px 20px;
+    padding: 80px 40px;
     max-width: 600px;
     margin: 40px auto;
     border-radius: 10px;
@@ -435,3 +570,4 @@ footer {
     }
 }
 
+}
