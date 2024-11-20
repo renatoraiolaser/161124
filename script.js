@@ -32,6 +32,8 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
+
+
 // Inicializa o primeiro slide
 showSlide(currentSlide);
 
