@@ -25,15 +25,16 @@ main {
 }
 
 /* Estilo inicial do popup */
+/* Estilo inicial do popup */
 .cookie-popup {
     position: fixed;
-    bottom: 0;
+    bottom: 0; /* Fixado na parte inferior da tela */
     left: 0;
     width: 100%;
-    background-color: #0c3835;
+    background-color: #0c3835; /* Fundo verde escuro */
     color: white;
     padding: 15px 20px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra no topo */
     z-index: 1000;
     text-align: center;
     transition: transform 0.3s ease, opacity 0.3s ease;

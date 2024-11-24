@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         acceptButton.addEventListener('click', function () {
             cookiePopup.classList.add('hidden'); // Esconde o popup
             setTimeout(() => {
-                cookiePopup.remove(); // Remove o elemento do DOM
+                cookiePopup.remove(); // Remove o elemento do DOM após a animação
             }, 300); // Aguarda a transição
         });
     }
