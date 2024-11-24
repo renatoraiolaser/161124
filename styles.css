@@ -47,7 +47,8 @@ main {
 }
 .cookie-popup.hidden {
     display: none;
-    z-index: 0;
+    z-index: -1;
+    pointer-events: none;
 }
  
 .cookie-popup.show {
