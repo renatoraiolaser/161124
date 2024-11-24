@@ -35,7 +35,7 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: -1;;
+    z-index: 1000;;
     width: 90%; /* Ajusta para telas pequenas */
     height:250px;
     max-width: 500px; /* Limita o tamanho máximo */
