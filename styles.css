@@ -46,10 +46,10 @@ main {
     align-items: center; /* Centraliza texto e botão */
 }
 #cookie-popup.hidden {
-    opacity: 0; /* Torna o popup invisível */
-    transform: translateY(-100%); /* Move o popup para fora da tela */
-    pointer-events: none; /* Impede interação */
-    position: absolute; /* Remove do fluxo fixo */
+    opacity: 0; /* Torna invisível */
+    transform: translateY(-100%); /* Move para fora da tela */
+    pointer-events: none; /* Remove interatividade */
+    position: absolute; /* Remove a interferência do fluxo fixo */
 }
  
 .cookie-popup.show {
