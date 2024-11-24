@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const cookiePopup = document.getElementById('cookie-popup');
     const acceptButton = document.getElementById('accept-cookies');
 
-    // Ação ao clicar no botão de aceitação
+    // Adiciona evento ao botão de aceitar
     acceptButton.addEventListener('click', function () {
         cookiePopup.classList.add('hidden'); // Esconde o popup
         setTimeout(() => {
-            cookiePopup.remove(); // Remove o elemento do DOM após a animação
-        }, 300); // Tempo da transição (300ms)
+            cookiePopup.remove(); // Remove o elemento do DOM
+        }, 300); // Espera a animação terminar (300ms)
     });
 });
 
