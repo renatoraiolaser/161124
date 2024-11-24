@@ -45,10 +45,10 @@ main {
     flex-direction: column; /* Organiza elementos verticalmente */
     align-items: center; /* Centraliza texto e botão */
 }
-.cookie-popup.hidden {
-    display: none;
-    z-index: -1;
-    pointer-events: none;
+#cookie-popup.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Remove a interação */
 }
  
 .cookie-popup.show {
