@@ -9,10 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Ação ao clicar no botão de aceitação
     acceptButton.addEventListener('click', function () {
-        localStorage.setItem('cookiesAccepted', 'true'); // Salva a aceitação
+        localStorage.setItem('cookiesAccepted', 'true'); // Salva a aceitação no localStorage
         cookiePopup.classList.add('hidden'); // Esconde o popup
+        setTimeout(() => {
+            cookiePopup.remove(); // Remove completamente o elemento do DOM após a animação
+        }, 300); // Tempo da transição definida no CSS (0.3s)
     });
 });
+
 
 
 // Slider de Tópicos
