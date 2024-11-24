@@ -1,18 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const cookiePopup = document.getElementById("cookiePopup");
-    const acceptButton = document.getElementById("acceptCookies");
+document.addEventListener('DOMContentLoaded', function () {
+    const cookiePopup = document.getElementById('cookie-popup');
+    const acceptButton = document.getElementById('accept-cookies');
 
-    // Verificar se os cookies já foram aceitos
-    if (!localStorage.getItem("cookiesAccepted")) {
-        cookiePopup.classList.add("show");
+    // Verificar se o usuário já aceitou os cookies
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+        cookiePopup.classList.add('hidden');
     }
 
-    // Evento de aceitação dos cookies
-    acceptButton.addEventListener("click", () => {
-        localStorage.setItem("cookiesAccepted", "true");
-        cookiePopup.classList.remove("show");
+    // Ação ao clicar no botão de aceitação
+    acceptButton.addEventListener('click', function () {
+        localStorage.setItem('cookiesAccepted', 'true'); // Salva a aceitação
+        cookiePopup.classList.add('hidden'); // Esconde o popup
     });
 });
+
 
 // Slider de Tópicos
 const slides = document.querySelectorAll(".slide");
